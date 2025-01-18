@@ -6,7 +6,7 @@ import express from "express";
 
 function convert(date){
   if(date){
-    return date.toTemporalInstant();
+    return date.toTemporalInstant().toZonedDateTimeISO("UTC");
   }
 }
 
