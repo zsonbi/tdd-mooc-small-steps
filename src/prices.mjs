@@ -1,3 +1,4 @@
+import { Temporal } from "@js-temporal/polyfill";
 import "./polyfills";
 import express from "express";
 
@@ -92,7 +93,7 @@ function createApp(database) {
   function isHoliday(date) {
     const holidays = database.getHolidays();
     for (let row of holidays) {
-      let holiday = new Date(row.holiday);
+      let holiday = Temporal.PlainDate.from(row.holiday);
       let holiday2 = convert(holiday);
       let date2=convert(date);
       if (
