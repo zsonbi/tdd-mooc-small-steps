@@ -6,8 +6,6 @@ import express from "express";
 // Use Temporal.PlainDate instead. See /test/date_conversion.spec.mjs for examples.
 
 
-
-
 function createApp(database) {
   const app = express();
 
