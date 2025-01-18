@@ -10,7 +10,6 @@ function convert(date){
     return date.toTemporalInstant().toZonedDateTimeISO("UTC").toPlainDate();
   }
   else{
-    return date;
   }
 }
 
